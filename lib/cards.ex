@@ -30,4 +30,10 @@ defmodule Cards do
       {:error, _reason} -> "Error reading file"
     end
   end
+
+  def createHand(handSize) do
+    deck = Cards.createDeck()
+    deck = Cards.shuffle(deck)
+    hand = Cards.deal(deck, handSize)
+  end
 end
