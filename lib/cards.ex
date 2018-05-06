@@ -32,8 +32,8 @@ defmodule Cards do
   end
 
   def createHand(handSize) do
-    deck = Cards.createDeck()
-    deck = Cards.shuffle(deck)
-    hand = Cards.deal(deck, handSize)
+    Cards.createDeck
+    |> Cards.shuffle
+    |> Cards.deal(handSize)
   end
 end
